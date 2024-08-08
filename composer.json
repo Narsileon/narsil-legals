@@ -1,0 +1,68 @@
+{
+	"name": "narsil/legals",
+	"description": "Narsil Legals",
+	"license": "MIT",
+	"keywords": [
+		"laravel",
+		"narsil",
+		"legals"
+	],
+	"authors": [
+		{
+			"name": "Jonathan Rigaux"
+		}
+	],
+	"repositories": [
+		{
+			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-forms.git",
+			"no-api": true
+		},
+		{
+			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-localization.git",
+			"no-api": true
+		},
+		{
+			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-policies.git",
+			"no-api": true
+		},
+		{
+			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-ui.git",
+			"no-api": true
+		}
+	],
+	"require": {
+		"php": "^8.2",
+		"inertiajs/inertia-laravel": "^1.0",
+		"laravel/framework": "^11.3",
+		"narsil/forms": "dev-main",
+		"narsil/localization": "dev-main",
+		"narsil/policies": "dev-main",
+		"narsil/ui": "dev-main"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^11.0"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"Narsil\\Legals\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Narsil\\Legals\\NarsilLegalsServiceProvider"
+			]
+		}
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"preferred-install": "dist",
+		"sort-packages": true
+	}
+}
