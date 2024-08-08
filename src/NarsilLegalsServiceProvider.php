@@ -4,7 +4,12 @@ namespace Narsil\Legals;
 
 #region USE
 
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
+use Narsil\Legals\Models\Imprint;
+use Narsil\Legals\Models\PrivacyNotice;
+use Narsil\Legals\Policies\ImprintPolicy;
+use Narsil\Legals\Policies\PrivacyNoticePolicy;
 
 #endregion
 
@@ -23,6 +28,7 @@ final class NarsilLegalsServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->bootMigrations();
+        $this->bootPolicies();
         $this->bootTranslations();
     }
 
@@ -38,6 +44,15 @@ final class NarsilLegalsServiceProvider extends ServiceProvider
         $this->loadMigrationsFrom([
             __DIR__ . '/../database/migrations',
         ]);
+    }
+
+    /**
+     * @return void
+     */
+    private function bootPolicies(): void
+    {
+        Gate::policy(Imprint::class, ImprintPolicy::class);
+        Gate::policy(PrivacyNotice::class, PrivacyNoticePolicy::class);
     }
 
     /**
