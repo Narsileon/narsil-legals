@@ -49,13 +49,20 @@ return new class extends Migration
 
         Schema::create(Imprint::TABLE, function (Blueprint $table)
         {
-            $table->resource();
-
-            $table->foreignId(Imprint::LANGUAGE_ID)
+            $table
+                ->id(Imprint::ID);
+            $table
+                ->boolean(Imprint::ACTIVE)
+                ->default(true);
+            $table
+                ->foreignId(Imprint::LANGUAGE_ID)
                 ->constrained(Language::TABLE, Language::ID)
                 ->cascadeOnDelete();
-            $table->text(Imprint::CONTENT)
+            $table
+                ->text(Imprint::CONTENT)
                 ->nullable();
+            $table
+                ->timestamps();
         });
     }
 
@@ -71,13 +78,20 @@ return new class extends Migration
 
         Schema::create(PrivacyNotice::TABLE, function (Blueprint $table)
         {
-            $table->resource();
-
-            $table->foreignId(PrivacyNotice::LANGUAGE_ID)
+            $table
+                ->id();
+            $table
+                ->boolean(PrivacyNotice::ACTIVE)
+                ->default(true);
+            $table
+                ->foreignId(PrivacyNotice::LANGUAGE_ID)
                 ->constrained(Language::TABLE, Language::ID)
                 ->cascadeOnDelete();
-            $table->text(PrivacyNotice::CONTENT)
+            $table
+                ->text(PrivacyNotice::CONTENT)
                 ->nullable();
+            $table
+                ->timestamps();
         });
     }
 
