@@ -29,6 +29,7 @@ final class NarsilLegalsServiceProvider extends ServiceProvider
     {
         $this->bootMigrations();
         $this->bootPolicies();
+        $this->bootRoutes();
         $this->bootTranslations();
     }
 
@@ -53,6 +54,14 @@ final class NarsilLegalsServiceProvider extends ServiceProvider
     {
         Gate::policy(Imprint::class, ImprintPolicy::class);
         Gate::policy(PrivacyNotice::class, PrivacyNoticePolicy::class);
+    }
+
+    /**
+     * @return void
+     */
+    private function bootRoutes(): void
+    {
+        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
     }
 
     /**
