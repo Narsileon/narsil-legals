@@ -43,7 +43,7 @@ class PrivacyNoticeController extends Controller
     {
         $privacyNotice = PrivacyNotice::active()->first();
 
-        return $privacyNotice?->{PrivacyNotice::CONTENT} ?? "";
+        return $privacyNotice?->{PrivacyNotice::CONTENT} ?? '';
     }
 
     #endregion

@@ -43,7 +43,7 @@ class ImprintController extends Controller
     {
         $imprint = Imprint::active()->first();
 
-        return $imprint?->{Imprint::CONTENT} ?? "";
+        return $imprint?->{Imprint::CONTENT} ?? '';
     }
 
     #endregion
