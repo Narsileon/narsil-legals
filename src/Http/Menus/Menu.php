@@ -27,12 +27,12 @@ class Menu extends AbstractMenu
         return [[
             MenuNode::LABEL => 'Imprints',
             MenuNode::URL => '/backend/imprints',
-            MenuNode::VISIBILITY => VisibilityEnum::AUTH,
+            MenuNode::VISIBILITY => VisibilityEnum::AUTH->value,
             MenuNode::RELATIONSHIP_ICON => 'lucide/fingerprint',
         ], [
             MenuNode::LABEL => 'Privacy notices',
             MenuNode::URL => '/backend/privacy-notices',
-            MenuNode::VISIBILITY => VisibilityEnum::AUTH,
+            MenuNode::VISIBILITY => VisibilityEnum::AUTH->value,
             MenuNode::RELATIONSHIP_ICON => 'lucide/shield',
         ]];
     }
