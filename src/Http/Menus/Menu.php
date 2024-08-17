@@ -25,12 +25,12 @@ class Menu extends AbstractMenu
     public static function getBackendMenu(): array
     {
         return [[
-            MenuNode::URL => route('backend.imprints.index', absolute: false),
             MenuNode::LABEL => 'Imprints',
+            MenuNode::URL => '/backend/imprints',
             MenuNode::RELATIONSHIP_ICON => 'lucide/fingerprint',
         ], [
-            MenuNode::URL => route('backend.privacy-notices.index', absolute: false),
             MenuNode::LABEL => 'Privacy notices',
+            MenuNode::URL => '/backend/privacy-notices',
             MenuNode::RELATIONSHIP_ICON => 'lucide/shield',
         ]];
     }
@@ -41,12 +41,12 @@ class Menu extends AbstractMenu
     public static function getFooterMenu(): array
     {
         return [[
-            MenuNode::URL => route('imprint', absolute: false),
             MenuNode::LABEL => 'Imprint',
+            MenuNode::URL => '/imprint',
             MenuNode::VISIBILITY => VisibilityEnum::USER->value,
         ], [
-            MenuNode::URL => route('privacy-notice', absolute: false),
             MenuNode::LABEL => 'Privacy notice',
+            MenuNode::URL => '/privacy-notice',
             MenuNode::VISIBILITY => VisibilityEnum::USER->value,
         ]];
     }
