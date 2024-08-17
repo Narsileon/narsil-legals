@@ -30,6 +30,10 @@ class PrivacyNotice extends Model
     {
         $this->table = self::TABLE;
 
+        $this->casts = [
+            self::ACTIVE => true,
+        ];
+
         $this->guarded = [
             self::ID,
         ];
