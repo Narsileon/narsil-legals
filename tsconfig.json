@@ -12,6 +12,7 @@
 		"noEmit": true,
 		"noFallthroughCasesInSwitch": true,
 		"paths": {
+			"@narsil-localization/*": ["./vendor/narsil/localization/resources/js/*"],
 			"@narsil-ui/*": ["./vendor/narsil/ui/resources/js/*"]
 		},
 		"resolveJsonModule": true,
