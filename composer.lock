@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f5904ef0ba13bccabf58140292762589",
+    "content-hash": "017ecb4bbbf0ebe2beb536ce50dc751d",
     "packages": [
         {
             "name": "brick/math",
@@ -1934,12 +1934,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Narsileon/narsil-forms.git",
-                "reference": "ab9e9d6d3cf02eb4e7303930ff5b0ba09542e78f"
+                "reference": "024275b59404107fa968113562c1bd88c0cec2ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Narsileon/narsil-forms/zipball/ab9e9d6d3cf02eb4e7303930ff5b0ba09542e78f",
-                "reference": "ab9e9d6d3cf02eb4e7303930ff5b0ba09542e78f",
+                "url": "https://api.github.com/repos/Narsileon/narsil-forms/zipball/024275b59404107fa968113562c1bd88c0cec2ca",
+                "reference": "024275b59404107fa968113562c1bd88c0cec2ca",
                 "shasum": ""
             },
             "require": {
@@ -1981,7 +1981,7 @@
                 "laravel",
                 "narsil"
             ],
-            "time": "2024-08-16T12:25:58+00:00"
+            "time": "2024-08-17T05:19:28+00:00"
         },
         {
             "name": "narsil/localization",
@@ -1989,12 +1989,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Narsileon/narsil-localization.git",
-                "reference": "72e4dcb7b54091ba593bd581b59f106d5806e88a"
+                "reference": "dd5887094ded65730b897eaf6b4298ae715c9936"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Narsileon/narsil-localization/zipball/72e4dcb7b54091ba593bd581b59f106d5806e88a",
-                "reference": "72e4dcb7b54091ba593bd581b59f106d5806e88a",
+                "url": "https://api.github.com/repos/Narsileon/narsil-localization/zipball/dd5887094ded65730b897eaf6b4298ae715c9936",
+                "reference": "dd5887094ded65730b897eaf6b4298ae715c9936",
                 "shasum": ""
             },
             "require": {
@@ -2036,7 +2036,64 @@
                 "react",
                 "translations"
             ],
-            "time": "2024-08-13T18:09:48+00:00"
+            "time": "2024-08-17T05:26:08+00:00"
+        },
+        {
+            "name": "narsil/menus",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Narsileon/narsil-menus.git",
+                "reference": "e193477a60b8870be62d42f248c2bff664b8a7b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Narsileon/narsil-menus/zipball/e193477a60b8870be62d42f248c2bff664b8a7b9",
+                "reference": "e193477a60b8870be62d42f248c2bff664b8a7b9",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^11.3",
+                "narsil/forms": "dev-main",
+                "narsil/localization": "dev-main",
+                "narsil/storage": "dev-main",
+                "narsil/tree": "dev-main",
+                "narsil/ui": "dev-main",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Narsil\\Menus\\NarsilTableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Narsil\\Menus\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Rigaux"
+                }
+            ],
+            "description": "Narsil menus",
+            "keywords": [
+                "laravel",
+                "menus",
+                "narsil",
+                "react"
+            ],
+            "time": "2024-08-17T06:35:55+00:00"
         },
         {
             "name": "narsil/policies",
@@ -2044,12 +2101,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Narsileon/narsil-policies.git",
-                "reference": "44091e91cafc231141ff8e6c812b0dce6f03337e"
+                "reference": "41372472d5f537aecf6d1d67bbb571be017183d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Narsileon/narsil-policies/zipball/44091e91cafc231141ff8e6c812b0dce6f03337e",
-                "reference": "44091e91cafc231141ff8e6c812b0dce6f03337e",
+                "url": "https://api.github.com/repos/Narsileon/narsil-policies/zipball/41372472d5f537aecf6d1d67bbb571be017183d8",
+                "reference": "41372472d5f537aecf6d1d67bbb571be017183d8",
                 "shasum": ""
             },
             "require": {
@@ -2088,7 +2145,112 @@
                 "narsil",
                 "policies"
             ],
-            "time": "2024-08-10T14:38:04+00:00"
+            "time": "2024-08-17T05:27:17+00:00"
+        },
+        {
+            "name": "narsil/storage",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Narsileon/narsil-storage.git",
+                "reference": "3f3013522d3380e7f70fa1050c2d9cbad763f2dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Narsileon/narsil-storage/zipball/3f3013522d3380e7f70fa1050c2d9cbad763f2dd",
+                "reference": "3f3013522d3380e7f70fa1050c2d9cbad763f2dd",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^11.3",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Narsil\\Storage\\NarsilStorageServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Narsil\\Storage\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Rigaux"
+                }
+            ],
+            "description": "Narsil Storage",
+            "keywords": [
+                "laravel",
+                "narsil",
+                "storage"
+            ],
+            "time": "2024-08-17T05:24:37+00:00"
+        },
+        {
+            "name": "narsil/tree",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Narsileon/narsil-tree.git",
+                "reference": "12603bb95d9062ca3409988caf364f0ed1187a81"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Narsileon/narsil-tree/zipball/12603bb95d9062ca3409988caf364f0ed1187a81",
+                "reference": "12603bb95d9062ca3409988caf364f0ed1187a81",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^11.3",
+                "narsil/localization": "dev-main",
+                "narsil/ui": "dev-main",
+                "php": "^8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.0"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Narsil\\Tree\\NarsilTableServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Narsil\\Tree\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Rigaux"
+                }
+            ],
+            "description": "Narsil tree",
+            "keywords": [
+                "laravel",
+                "narsil",
+                "react",
+                "tree"
+            ],
+            "time": "2024-08-17T05:59:20+00:00"
         },
         {
             "name": "narsil/ui",
@@ -7406,6 +7568,7 @@
     "stability-flags": {
         "narsil/forms": 20,
         "narsil/localization": 20,
+        "narsil/menus": 20,
         "narsil/policies": 20,
         "narsil/ui": 20
     },

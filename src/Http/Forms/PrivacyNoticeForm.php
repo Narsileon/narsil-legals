@@ -1,6 +1,6 @@
 <?php
 
-namespace Narsil\Framework\Http\Forms;
+namespace Narsil\Legals\Http\Forms;
 
 #region USE
 
@@ -10,7 +10,7 @@ use Narsil\Forms\Builder\Elements\FormCard;
 use Narsil\Forms\Builder\Inputs\FormOptions;
 use Narsil\Forms\Builder\Inputs\FormSelect;
 use Narsil\Forms\Builder\Inputs\FormString;
-use Narsil\Legals\Models\Imprint;
+use Narsil\Legals\Models\PrivacyNotice;
 use Narsil\Localization\Models\Language;
 
 #endregion
@@ -20,7 +20,7 @@ use Narsil\Localization\Models\Language;
  *
  * @author Jonathan Rigaux
  */
-class ImprintForm extends AbstractForm
+class PrivacyNoticeForm extends AbstractForm
 {
     #region CONSTRUCTOR
 
@@ -29,7 +29,7 @@ class ImprintForm extends AbstractForm
      */
     public function __construct()
     {
-        parent::__construct('Imprint', 'imprint');
+        parent::__construct('Privacy notice', 'privacy-notice');
     }
 
     #endregion
@@ -42,7 +42,7 @@ class ImprintForm extends AbstractForm
     protected function getOptions(): array
     {
         return [
-            Imprint::LANGUAGE_ID => (new FormOptions())
+            PrivacyNotice::LANGUAGE_ID => (new FormOptions())
                 ->options(Language::options()->get()->toArray())
                 ->get(),
         ];
@@ -56,11 +56,11 @@ class ImprintForm extends AbstractForm
         return [
             (new FormCard('default'))
                 ->children([
-                    (new FormSelect(Imprint::LANGUAGE_ID))
+                    (new FormSelect(PrivacyNotice::LANGUAGE_ID))
                         ->labelKey(Language::LANGUAGE)
                         ->valueKey(Language::ID)
                         ->required(),
-                    (new FormString(Imprint::CONTENT))
+                    (new FormString(PrivacyNotice::CONTENT))
                         ->nodeType('editor')
                         ->required(),
                 ]),

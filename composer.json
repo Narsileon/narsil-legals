@@ -3,9 +3,12 @@
 	"description": "Narsil Legals",
 	"license": "MIT",
 	"keywords": [
+		"inertia",
 		"laravel",
+		"legals",
 		"narsil",
-		"legals"
+		"php",
+		"react"
 	],
 	"authors": [
 		{
@@ -25,7 +28,22 @@
 		},
 		{
 			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-menus.git",
+			"no-api": true
+		},
+		{
+			"type": "vcs",
 			"url": "git@github.com:Narsileon/narsil-policies.git",
+			"no-api": true
+		},
+		{
+			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-storage.git",
+			"no-api": true
+		},
+		{
+			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-tree.git",
 			"no-api": true
 		},
 		{
@@ -40,6 +58,7 @@
 		"laravel/framework": "^11.3",
 		"narsil/forms": "dev-main",
 		"narsil/localization": "dev-main",
+		"narsil/menus": "dev-main",
 		"narsil/policies": "dev-main",
 		"narsil/ui": "dev-main"
 	},
