@@ -18,7 +18,7 @@ const Index = ({ content }: Props) => {
 		<Fullscreen>
 			<Section>
 				<SectionHeader>
-					<SectionTitle>{trans("Privacy Notice")}</SectionTitle>
+					<SectionTitle>{trans("Privacy notice")}</SectionTitle>
 					<FullscreenToggle />
 				</SectionHeader>
 				<SectionContent className='prose max-w-none'>{parse(content)}</SectionContent>
