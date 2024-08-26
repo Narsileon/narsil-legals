@@ -15,7 +15,7 @@ use Narsil\Menus\Models\MenuNode;
  *
  * @author Jonathan Rigaux
  */
-class Menu extends AbstractMenu
+class LegalsMenu extends AbstractMenu
 {
     #region PUBLIC METHODS
 
