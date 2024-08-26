@@ -37,21 +37,5 @@ class LegalsMenu extends AbstractMenu
         ]];
     }
 
-    /**
-     * @return array
-     */
-    public static function getFooterMenu(): array
-    {
-        return [[
-            MenuNode::LABEL => 'Imprint',
-            MenuNode::URL => '/imprint',
-            MenuNode::VISIBILITY => VisibilityEnum::USER->value,
-        ], [
-            MenuNode::LABEL => 'Privacy notice',
-            MenuNode::URL => '/privacy-notice',
-            MenuNode::VISIBILITY => VisibilityEnum::USER->value,
-        ]];
-    }
-
     #endregion
 }
