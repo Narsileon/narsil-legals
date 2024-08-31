@@ -25,11 +25,13 @@ class ImprintForm extends AbstractForm
     #region CONSTRUCTOR
 
     /**
+     * @param mixed $resource
+     *
      * @return void
      */
-    public function __construct()
+    public function __construct(mixed $resource)
     {
-        parent::__construct('Imprint', 'imprint');
+        parent::__construct($resource, 'Imprint', 'imprint');
     }
 
     #endregion

@@ -25,11 +25,13 @@ class PrivacyNoticeForm extends AbstractForm
     #region CONSTRUCTOR
 
     /**
+     * @param mixed $resource
+     *
      * @return void
      */
-    public function __construct()
+    public function __construct(mixed $resource)
     {
-        parent::__construct('Privacy notice', 'privacy-notice');
+        parent::__construct($resource, 'Privacy notice', 'privacy-notice');
     }
 
     #endregion
