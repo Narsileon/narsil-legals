@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\App;
 use Narsil\Localization\Models\Language;
+use Narsil\Tables\Constants\Types;
 
 #endregion
 
@@ -31,7 +32,7 @@ class Imprint extends Model
         $this->table = self::TABLE;
 
         $this->casts = [
-            self::ACTIVE => true,
+            self::ACTIVE => Types::BOOLEAN,
         ];
 
         $this->guarded = [

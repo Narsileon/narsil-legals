@@ -90,7 +90,7 @@ class PrivacyNotice extends Model
             Language::class,
             self::LANGUAGE_ID,
             Language::ID
-        )->select(Language::LOCALE);
+        );
     }
 
     #endregion
