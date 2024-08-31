@@ -42,6 +42,10 @@
 		},
 		{
 			"type": "vcs",
+			"url": "git@github.com:Narsileon/narsil-tables.git"
+		},
+		{
+			"type": "vcs",
 			"url": "git@github.com:Narsileon/narsil-tree.git"
 		},
 		{
@@ -57,6 +61,7 @@
 		"narsil/localization": "dev-main",
 		"narsil/menus": "dev-main",
 		"narsil/policies": "dev-main",
+		"narsil/tables": "dev-main",
 		"narsil/ui": "dev-main"
 	},
 	"require-dev": {
