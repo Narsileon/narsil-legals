@@ -5,10 +5,10 @@ namespace Narsil\Legals\Http\Resources;
 #region USE
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\ResourceCollection;
 use JsonSerializable;
 use Narsil\Legals\Models\Imprint;
 use Narsil\Localization\Models\Language;
+use Narsil\Tables\Http\Resources\DataTableCollection;
 
 #endregion
 
@@ -17,7 +17,7 @@ use Narsil\Localization\Models\Language;
  *
  * @author Jonathan Rigaux
  */
-class ImprintDataTableCollection extends ResourceCollection
+class ImprintDataTableCollection extends DataTableCollection
 {
     #region PUBLIC METHODS
 
