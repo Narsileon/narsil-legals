@@ -6,7 +6,7 @@ namespace Narsil\Legals\Http\Resources;
 
 use Illuminate\Http\Request;
 use JsonSerializable;
-use Narsil\Legals\Models\Imprint;
+use Narsil\Legals\Models\PrivacyNotice;
 use Narsil\Localization\Models\Language;
 use Narsil\Tables\Http\Resources\DataTableCollection;
 use Narsil\Tables\Structures\ModelColumn;
@@ -18,7 +18,7 @@ use Narsil\Tables\Structures\ModelColumn;
  *
  * @author Jonathan Rigaux
  */
-class ImprintDataTableCollection extends DataTableCollection
+class PrivacyNoticeDataTableCollection extends DataTableCollection
 {
     #region PUBLIC METHODS
 
@@ -33,9 +33,9 @@ class ImprintDataTableCollection extends DataTableCollection
         {
             $attributes = $item->toArray();
 
-            $attributes[Imprint::LANGUAGE_ID] = null;
-            $attributes[Imprint::RELATIONSHIP_LANGUAGE] = [
-                Language::LANGUAGE => $item->{Imprint::RELATIONSHIP_LANGUAGE}->{Language::LANGUAGE},
+            $attributes[PrivacyNotice::LANGUAGE_ID] = null;
+            $attributes[PrivacyNotice::RELATIONSHIP_LANGUAGE] = [
+                Language::LANGUAGE => $item->{PrivacyNotice::RELATIONSHIP_LANGUAGE}->{Language::LANGUAGE},
             ];
 
             return array_filter($attributes);
@@ -53,8 +53,8 @@ class ImprintDataTableCollection extends DataTableCollection
     {
         $columns = parent::getColumns();
 
-        $columns[Imprint::LANGUAGE_ID] = array_merge(($columns[Imprint::LANGUAGE_ID]), [
-            ModelColumn::ACCESSOR_KEY => Imprint::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE,
+        $columns[PrivacyNotice::LANGUAGE_ID] = array_merge(($columns[PrivacyNotice::LANGUAGE_ID]), [
+            ModelColumn::ACCESSOR_KEY => PrivacyNotice::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE,
         ]);
 
         return $columns;
