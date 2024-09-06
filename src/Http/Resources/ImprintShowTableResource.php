@@ -5,11 +5,11 @@ namespace Narsil\Legals\Http\Resources;
 #region USE
 
 use Illuminate\Http\Request;
-use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Collection;
 use Narsil\Legals\Models\Imprint;
 use Narsil\Localization\Models\Language;
 use Narsil\Tables\Constants\Types;
+use Narsil\Tables\Http\Resources\ShowTableResource;
 
 #endregion
 
@@ -18,7 +18,7 @@ use Narsil\Tables\Constants\Types;
  *
  * @author Jonathan Rigaux
  */
-class ImprintShowTableResource extends JsonResource
+class ImprintShowTableResource extends ShowTableResource
 {
     #region PUBLIC METHODS
 
