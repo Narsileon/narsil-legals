@@ -5,9 +5,11 @@ namespace Narsil\Legals\Http\Resources;
 #region USE
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use JsonSerializable;
 use Narsil\Legals\Models\Imprint;
 use Narsil\Localization\Models\Language;
+use Narsil\Tables\Constants\Types;
 use Narsil\Tables\Http\Resources\DataTableCollection;
 use Narsil\Tables\Structures\ModelColumn;
 
@@ -47,18 +49,22 @@ class ImprintDataTableCollection extends DataTableCollection
     #region PROTECTED METHODS
 
     /**
-     * @return array
+     * @return Collection<ModelColumn>
      */
-    protected function getColumns(): array
+    protected function getColumns(): Collection
     {
         $columns = parent::getColumns();
 
-        $columns[Imprint::LANGUAGE_ID] = array_merge(($columns[Imprint::LANGUAGE_ID]), [
-            ModelColumn::ACCESSOR_KEY => Imprint::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE,
-        ]);
+        $languageId = $columns->get(Imprint::LANGUAGE_ID);
+
+        $languageId->setAccessorKey(Imprint::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE);
+        $languageId->setType(Types::STRING);
+
+        $columns->put(Imprint::LANGUAGE_ID, $languageId);
 
         return $columns;
     }
+
 
     #endregion
 }

@@ -5,6 +5,7 @@ namespace Narsil\Legals\Http\Resources;
 #region USE
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Collection;
 use JsonSerializable;
 use Narsil\Legals\Models\PrivacyNotice;
 use Narsil\Localization\Models\Language;
@@ -47,9 +48,9 @@ class PrivacyNoticeDataTableCollection extends DataTableCollection
     #region PROTECTED METHODS
 
     /**
-     * @return array
+     * @return Collection<ModelColumn>
      */
-    protected function getColumns(): array
+    protected function getColumns(): Collection
     {
         $columns = parent::getColumns();
 
