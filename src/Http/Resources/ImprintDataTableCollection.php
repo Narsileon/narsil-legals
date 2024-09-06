@@ -65,6 +65,5 @@ class ImprintDataTableCollection extends DataTableCollection
         return $columns;
     }
 
-
     #endregion
 }
