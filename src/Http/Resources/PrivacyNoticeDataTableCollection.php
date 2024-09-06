@@ -9,6 +9,7 @@ use Illuminate\Support\Collection;
 use JsonSerializable;
 use Narsil\Legals\Models\PrivacyNotice;
 use Narsil\Localization\Models\Language;
+use Narsil\Tables\Constants\Types;
 use Narsil\Tables\Http\Resources\DataTableCollection;
 use Narsil\Tables\Structures\ModelColumn;
 
@@ -54,9 +55,12 @@ class PrivacyNoticeDataTableCollection extends DataTableCollection
     {
         $columns = parent::getColumns();
 
-        $columns[PrivacyNotice::LANGUAGE_ID] = array_merge(($columns[PrivacyNotice::LANGUAGE_ID]), [
-            ModelColumn::ACCESSOR_KEY => PrivacyNotice::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE,
-        ]);
+        $languageId = $columns->get(PrivacyNotice::LANGUAGE_ID);
+
+        $languageId->setAccessorKey(PrivacyNotice::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE);
+        $languageId->setType(Types::STRING);
+
+        $columns->put(PrivacyNotice::LANGUAGE_ID, $languageId);
 
         return $columns;
     }
