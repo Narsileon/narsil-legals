@@ -37,7 +37,7 @@ class ImprintDataTableCollection extends DataTableCollection
 
             $attributes[Imprint::LANGUAGE_ID] = null;
             $attributes[Imprint::RELATIONSHIP_LANGUAGE] = [
-                Language::LANGUAGE => $item->{Imprint::RELATIONSHIP_LANGUAGE}->{Language::LANGUAGE},
+                Language::LABEL => $item->{Imprint::RELATIONSHIP_LANGUAGE}->{Language::LABEL},
             ];
 
             return array_filter($attributes);
@@ -57,7 +57,7 @@ class ImprintDataTableCollection extends DataTableCollection
 
         $languageId = $columns->get(Imprint::LANGUAGE_ID);
 
-        $languageId->setAccessorKey(Imprint::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE);
+        $languageId->setAccessorKey(Imprint::RELATIONSHIP_LANGUAGE . '.' . Language::LABEL);
         $languageId->setType(Types::STRING);
 
         $columns->put(Imprint::LANGUAGE_ID, $languageId);

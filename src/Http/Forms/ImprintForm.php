@@ -59,7 +59,6 @@ class ImprintForm extends AbstractForm
             (new FormCard('default'))
                 ->children([
                     (new FormSelect(Imprint::LANGUAGE_ID))
-                        ->labelKey(Language::LANGUAGE)
                         ->valueKey(Language::ID)
                         ->required(),
                     (new FormString(Imprint::CONTENT))

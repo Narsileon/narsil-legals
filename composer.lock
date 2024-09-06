@@ -1997,12 +1997,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Narsileon/narsil-localization.git",
-                "reference": "68dc46ec62819a6fd699354cc87b014e7992fbc3"
+                "reference": "937676ec3354dcb88096284c21ac084a09b5ebda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Narsileon/narsil-localization/zipball/68dc46ec62819a6fd699354cc87b014e7992fbc3",
-                "reference": "68dc46ec62819a6fd699354cc87b014e7992fbc3",
+                "url": "https://api.github.com/repos/Narsileon/narsil-localization/zipball/937676ec3354dcb88096284c21ac084a09b5ebda",
+                "reference": "937676ec3354dcb88096284c21ac084a09b5ebda",
                 "shasum": ""
             },
             "require": {
@@ -2052,7 +2052,7 @@
                 "source": "https://github.com/Narsileon/narsil-localization/tree/main",
                 "issues": "https://github.com/Narsileon/narsil-localization/issues"
             },
-            "time": "2024-09-04T12:27:39+00:00"
+            "time": "2024-09-06T04:39:38+00:00"
         },
         {
             "name": "narsil/menus",

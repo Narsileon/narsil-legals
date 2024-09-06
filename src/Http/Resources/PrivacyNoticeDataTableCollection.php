@@ -37,7 +37,7 @@ class PrivacyNoticeDataTableCollection extends DataTableCollection
 
             $attributes[PrivacyNotice::LANGUAGE_ID] = null;
             $attributes[PrivacyNotice::RELATIONSHIP_LANGUAGE] = [
-                Language::LANGUAGE => $item->{PrivacyNotice::RELATIONSHIP_LANGUAGE}->{Language::LANGUAGE},
+                Language::LABEL => $item->{PrivacyNotice::RELATIONSHIP_LANGUAGE}->{Language::LABEL},
             ];
 
             return array_filter($attributes);
@@ -57,7 +57,7 @@ class PrivacyNoticeDataTableCollection extends DataTableCollection
 
         $languageId = $columns->get(PrivacyNotice::LANGUAGE_ID);
 
-        $languageId->setAccessorKey(PrivacyNotice::RELATIONSHIP_LANGUAGE . '.' . Language::LANGUAGE);
+        $languageId->setAccessorKey(PrivacyNotice::RELATIONSHIP_LANGUAGE . '.' . Language::LABEL);
         $languageId->setType(Types::STRING);
 
         $columns->put(PrivacyNotice::LANGUAGE_ID, $languageId);

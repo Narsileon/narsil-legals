@@ -59,7 +59,6 @@ class PrivacyNoticeForm extends AbstractForm
             (new FormCard('default'))
                 ->children([
                     (new FormSelect(PrivacyNotice::LANGUAGE_ID))
-                        ->labelKey(Language::LANGUAGE)
                         ->valueKey(Language::ID)
                         ->required(),
                     (new FormString(PrivacyNotice::CONTENT))
