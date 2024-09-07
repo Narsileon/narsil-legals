@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Support\Facades\App;
+use Narsil\Localization\Interfaces\IHasTranslations;
 use Narsil\Localization\Models\Language;
+use Narsil\Localization\Traits\HasTranslations;
 use Narsil\Tables\Constants\Types;
 
 #endregion
@@ -18,8 +20,10 @@ use Narsil\Tables\Constants\Types;
  *
  * @author Jonathan Rigaux
  */
-class Imprint extends Model
+class Imprint extends Model implements IHasTranslations
 {
+    use HasTranslations;
+
     #region CONSTRUCTOR
 
     /**
