@@ -16,20 +16,22 @@ const Index = ({ content }: Props) => {
 	const { trans } = useTranslationsStore();
 
 	return (
-		<Fullscreen>
+		<>
 			<AppHead
 				description={trans("Privacy notice")}
 				title={trans("Privacy notice")}
 				keywords={trans("Privacy notice")}
 			/>
-			<Section>
-				<SectionHeader>
-					<SectionTitle>{trans("Privacy notice")}</SectionTitle>
-					<FullscreenToggle />
-				</SectionHeader>
-				<SectionContent className='prose max-w-none'>{parse(content)}</SectionContent>
-			</Section>
-		</Fullscreen>
+			<Fullscreen>
+				<Section>
+					<SectionHeader>
+						<SectionTitle>{trans("Privacy notice")}</SectionTitle>
+						<FullscreenToggle />
+					</SectionHeader>
+					<SectionContent className='prose max-w-none'>{parse(content)}</SectionContent>
+				</Section>
+			</Fullscreen>
+		</>
 	);
 };
 
