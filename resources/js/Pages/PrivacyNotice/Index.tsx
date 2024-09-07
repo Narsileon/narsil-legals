@@ -6,6 +6,7 @@ import Section from "@narsil-ui/Components/Section/Section";
 import SectionContent from "@narsil-ui/Components/Section/SectionContent";
 import SectionHeader from "@narsil-ui/Components/Section/SectionHeader";
 import SectionTitle from "@narsil-ui/Components/Section/SectionTitle";
+import AppHead from "@narsil-ui/Components/App/AppHead";
 
 interface Props {
 	content: string;
@@ -16,6 +17,7 @@ const Index = ({ content }: Props) => {
 
 	return (
 		<Fullscreen>
+			<AppHead />
 			<Section>
 				<SectionHeader>
 					<SectionTitle>{trans("Privacy notice")}</SectionTitle>
