@@ -17,7 +17,11 @@ const Index = ({ content }: Props) => {
 
 	return (
 		<Fullscreen>
-			<AppHead />
+			<AppHead
+				description={trans("Imprint")}
+				title={trans("Imprint")}
+				keywords={trans("Imprint")}
+			/>
 			<Section>
 				<SectionHeader>
 					<SectionTitle>{trans("Imprint")}</SectionTitle>

@@ -17,7 +17,11 @@ const Index = ({ content }: Props) => {
 
 	return (
 		<Fullscreen>
-			<AppHead />
+			<AppHead
+				description={trans("Privacy notice")}
+				title={trans("Privacy notice")}
+				keywords={trans("Privacy notice")}
+			/>
 			<Section>
 				<SectionHeader>
 					<SectionTitle>{trans("Privacy notice")}</SectionTitle>
