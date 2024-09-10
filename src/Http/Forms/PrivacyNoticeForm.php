@@ -4,6 +4,7 @@ namespace Narsil\Legals\Http\Forms;
 
 #region USE
 
+use Illuminate\Http\Request;
 use Narsil\Forms\Builder\AbstractForm;
 use Narsil\Forms\Builder\AbstractFormNode;
 use Narsil\Forms\Builder\Elements\FormCard;
@@ -32,6 +33,24 @@ class PrivacyNoticeForm extends AbstractForm
     public function __construct(mixed $resource)
     {
         parent::__construct($resource, 'Privacy notice', 'privacy-notice');
+    }
+
+    #endregion
+
+    #region PUBLIC METHODS
+
+    /**
+     * @param Request $request
+     *
+     * @return array
+     */
+    public function toArray(Request $request): array
+    {
+        $attributes = parent::toArray($request);
+
+        $attributes[PrivacyNotice::RELATIONSHIP_LANGUAGE] = null;
+
+        return $attributes;
     }
 
     #endregion
