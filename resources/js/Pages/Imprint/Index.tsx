@@ -28,7 +28,7 @@ const Index = ({ content }: Props) => {
 						<SectionTitle>{trans("Imprint")}</SectionTitle>
 						<FullscreenToggle />
 					</SectionHeader>
-					<SectionContent className='prose max-w-none'>{parse(content)}</SectionContent>
+					<SectionContent className='prose text-foreground max-w-none'>{parse(content)}</SectionContent>
 				</Section>
 			</Fullscreen>
 		</>
