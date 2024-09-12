@@ -1,6 +1,6 @@
 <?php
 
-namespace Narsil\Legals\Http\Resources;
+namespace Narsil\Legals\Http\Resources\PrivacyNotices;
 
 #region USE
 

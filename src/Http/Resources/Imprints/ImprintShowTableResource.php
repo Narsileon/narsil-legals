@@ -1,12 +1,12 @@
 <?php
 
-namespace Narsil\Legals\Http\Resources;
+namespace Narsil\Legals\Http\Resources\Imprints;
 
 #region USE
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use Narsil\Legals\Models\PrivacyNotice;
+use Narsil\Legals\Models\Imprint;
 use Narsil\Localization\Models\Language;
 use Narsil\Tables\Constants\Types;
 use Narsil\Tables\Http\Resources\ShowTableResource;
@@ -18,7 +18,7 @@ use Narsil\Tables\Http\Resources\ShowTableResource;
  *
  * @author Jonathan Rigaux
  */
-class PrivacyNoticeShowTableResource extends ShowTableResource
+class ImprintShowTableResource extends ShowTableResource
 {
     #region PUBLIC METHODS
 
@@ -31,9 +31,9 @@ class PrivacyNoticeShowTableResource extends ShowTableResource
     {
         $attributes = $this->resource->toArray();
 
-        $attributes[PrivacyNotice::LANGUAGE_ID] = null;
-        $attributes[PrivacyNotice::RELATIONSHIP_LANGUAGE] = [
-            Language::LABEL => $this->resource->{PrivacyNotice::RELATIONSHIP_LANGUAGE}->{Language::LABEL},
+        $attributes[Imprint::LANGUAGE_ID] = null;
+        $attributes[Imprint::RELATIONSHIP_LANGUAGE] = [
+            Language::LABEL => $this->resource->{Imprint::RELATIONSHIP_LANGUAGE}->{Language::LABEL},
         ];
 
         return array_filter($attributes);
@@ -50,12 +50,12 @@ class PrivacyNoticeShowTableResource extends ShowTableResource
     {
         $columns = parent::getColumns();
 
-        $languageId = $columns->get(PrivacyNotice::LANGUAGE_ID);
+        $languageId = $columns->get(Imprint::LANGUAGE_ID);
 
-        $languageId->setAccessorKey(PrivacyNotice::RELATIONSHIP_LANGUAGE . '.' . Language::LABEL);
+        $languageId->setAccessorKey(Imprint::RELATIONSHIP_LANGUAGE . '.' . Language::LABEL);
         $languageId->setType(Types::STRING);
 
-        $columns->put(PrivacyNotice::LANGUAGE_ID, $languageId);
+        $columns->put(Imprint::LANGUAGE_ID, $languageId);
 
         return $columns;
     }

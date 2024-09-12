@@ -1,16 +1,16 @@
 <?php
 
-namespace Narsil\Legals\Http\Forms;
+namespace Narsil\Legals\Http\Resources\Imprints;
 
 #region USE
 
 use Illuminate\Http\Request;
-use Narsil\Forms\Builder\AbstractForm;
 use Narsil\Forms\Builder\AbstractFormNode;
 use Narsil\Forms\Builder\Elements\FormCard;
 use Narsil\Forms\Builder\Inputs\FormOptions;
 use Narsil\Forms\Builder\Inputs\FormSelect;
 use Narsil\Forms\Builder\Inputs\FormString;
+use Narsil\Forms\Http\Resources\AbstractFormResource;
 use Narsil\Legals\Models\Imprint;
 use Narsil\Localization\Models\Language;
 
@@ -21,7 +21,7 @@ use Narsil\Localization\Models\Language;
  *
  * @author Jonathan Rigaux
  */
-class ImprintForm extends AbstractForm
+class ImprintFormResource extends AbstractFormResource
 {
     #region CONSTRUCTOR
 
