@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 use Inertia\Inertia;
 use Inertia\Response;
 use Narsil\Legals\Models\Imprint;
+use Narsil\Localization\Services\LocalizationService;
 use Narsil\Menus\Models\MenuNode;
 
 #endregion
@@ -27,7 +28,7 @@ class ImprintController extends Controller
     public function __invoke(): Response
     {
         $breadcrumb = [[
-            MenuNode::LABEL => trans('Imprint'),
+            MenuNode::LABEL => LocalizationService::trans('Imprint'),
             MenuNode::URL => route('imprint'),
         ]];
 

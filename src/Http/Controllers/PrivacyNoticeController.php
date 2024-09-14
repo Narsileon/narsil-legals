@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 use Inertia\Inertia;
 use Inertia\Response;
 use Narsil\Legals\Models\PrivacyNotice;
+use Narsil\Localization\Services\LocalizationService;
 use Narsil\Menus\Models\MenuNode;
 
 #endregion
@@ -27,7 +28,7 @@ class PrivacyNoticeController extends Controller
     public function __invoke(): Response
     {
         $breadcrumb = [[
-            MenuNode::LABEL => trans('Privacy notice'),
+            MenuNode::LABEL => LocalizationService::trans('Privacy notice'),
             MenuNode::URL => route('privacy-notice'),
         ]];
 
