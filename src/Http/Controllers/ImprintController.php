@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller;
 use Inertia\Inertia;
 use Inertia\Response;
 use Narsil\Legals\Models\Imprint;
+use Narsil\Menus\Models\MenuNode;
 
 #endregion
 
@@ -25,9 +26,15 @@ class ImprintController extends Controller
      */
     public function __invoke(): Response
     {
+        $breadcrumb = [[
+            MenuNode::LABEL => trans('Imprint'),
+            MenuNode::URL => route('imprint'),
+        ]];
+
         $content = $this->getContent();
 
         return Inertia::render('narsil/legals::Imprint/Index', compact(
+            'breadcrumb',
             'content',
         ));
     }
